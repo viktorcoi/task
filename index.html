@@ -4,45 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
-    <form method="post" action="">
-        <ul>
-            <li>
-                <input id="aaa" type="checkbox" name="aaa" /> aaa
-            </li>
-            <li>
-                <input id="bbb" type="checkbox" name="bbb" /> bbb
-                <ul>
-                    <li>
-                        <input id="bbb__ccc" type="checkbox" name="ccc" /> ccc
-                    </li>
-                    <li>
-                        <input id="bbb__ddd" type="checkbox" name="ddd" /> ddd
-                    </li>
-                </ul>
-            </li>
-            <li>
-                <input id="eee" type="checkbox" name="eee" /> eee
-                <ul>
-                    <li>
-                        <input id="eee__fff" type="checkbox" name="fff" /> fff
-                        <ul>
-                            <li>
-                                <input id="eee__fff__ggg" type="checkbox" name="ggg" /> ggg
-                            </li>
-                            <li>
-                                <input id="eee__fff__hhh" type="checkbox" name="hhh" /> hhh
-                            </li>
-                        </ul>
-                    </li>
-                    <li><input id="eee__iii" type="checkbox" name="iii" /> iii</li>
-                </ul>
-            </li>
-            <li><input id="jjj" type="checkbox" name="jjj" /> jjj</li>
-        </ul>
-    </form>
+    <table class="table">
+        <tbody>
+            <tr>
+                <td class="horizontal-center-right" rowspan="3"><span>Пункт 1</span></td>
+                <td class="horizontal-center-full" rowspan="3"><span>Продолжение 1</span></td>
+                <td class="vertical-left-bottom horizontal-center-full"><span>Продолжение 2</span></td>
+                <td class="horizontal-center-left"><span>Конец 1</span></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="vertical-left-top horizontal-center-full" rowspan="2"><span>Пункт 2</span></td>
+                <td class="vertical-left-bottom horizontal-center-full" colspan="2"><span>Было</span></td>
+                <td class="horizontal-center-full vertical-left-25" rowspan="2"><span>Стало</span></td>
+                <td class="horizontal-center-left" rowspan="2"><span>Конец</span></td>
+            </tr>
+            <tr>
+                <td class="vertical-left-top horizontal-center-full"><span>Одныжды</span></td>
+                <td class="horizontal-center-full vertical-right-top"><span>Зимой</span></td>
+            </tr>
+        </tbody>
+    </table>
 </body>
 </html>
