@@ -1,6 +1,6 @@
 :root {
     --lise-size: 3px;
-    --color-line: red;
+    --color-line: blue;
 }
 
 .table {
@@ -22,6 +22,7 @@
 }
 
 .table td {
+    padding: 10px;
     text-align: center; 
     vertical-align: middle;
 }
@@ -33,7 +34,8 @@
 .vertical-right-full::before, .vertical-right-top::before, .vertical-right-bottom::before,
 .vertical-center-full::before, .vertical-center-top::before, .vertical-center-bottom::before,
 .vertical-center-25::before, .vertical-left-25::before, .vertical-right-25::before,
-.vertical-center-75::before, .vertical-left-75::before, .vertical-right-75::before {
+.vertical-center-75::before, .vertical-left-75::before, .vertical-right-75::before,
+.vertical-center-25-75::before, .vertical-left-25-75::before, .vertical-right-25-75::before {
     content: '';
     position: absolute;
     background-color: var(--color-line);
@@ -67,18 +69,19 @@
     left: 50%; right: calc(var(--lise-size) / -2);
 }
 
-.vertical-center-75::before, .vertical-center-25::before, .vertical-center-full::before, .vertical-center-top::before, .vertical-center-bottom::before {
+.vertical-center-75::before, .vertical-center-25::before, .vertical-center-full::before, .vertical-center-top::before, 
+.vertical-center-bottom::before, .vertical-center-25-75::before {
     width: var(--lise-size);
     left: 0; right: 0;
     margin: auto;
 }
 
-.vertical-left-75::before, .vertical-left-25::before, .vertical-left-full::before, .vertical-left-top::before, .vertical-left-bottom::before {
+.vertical-left-75::before, .vertical-left-25-75::before, .vertical-left-25::before, .vertical-left-full::before, .vertical-left-top::before, .vertical-left-bottom::before {
     width: var(--lise-size);
     left: calc(var(--lise-size) / -2);
 }
 
-vertical-right-75::before, .vertical-right-25::before, .vertical-right-full::before, .vertical-right-top::before, .vertical-right-bottom::before {
+.vertical-right-75::before, .vertical-right-25::before, .vertical-right-25-75::before, .vertical-right-full::before, .vertical-right-top::before, .vertical-right-bottom::before {
     width: var(--lise-size);
     right: calc(var(--lise-size) / -2);
 }
@@ -102,4 +105,8 @@ vertical-right-75::before, .vertical-right-25::before, .vertical-right-full::bef
 
 .vertical-center-75::before, .vertical-left-75::before, .vertical-right-75::before {
     top: calc(75% + var(--lise-size) / -2); bottom: calc(var(--lise-size) / -2);
+}
+
+.vertical-center-25-75::before, .vertical-left-25-75::before, .vertical-right-25-75::before  {
+    top: calc(25% + var(--lise-size) / -2); bottom: calc(25% + var(--lise-size) / -2);
 }
