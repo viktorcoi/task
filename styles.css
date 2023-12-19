@@ -1,13 +1,20 @@
 :root {
-    --lise-size: 3px;
-    --color-line: blue;
+    --lise-size: 1px;
+    --color-line: black;
+    --width-row: 130px; /* фиксированная ширина ячейки */
+    --bg-color: #f4f6f9;
+}
+
+.wrapper-table {
+    width: 100%;
+    display: block;
+    background-color: var(--bg-color);
+    overflow-x: auto;
 }
 
 .table {
-	width: 100%;
-	border-collapse:collapse;
-	border-spacing:0;
-	height: auto;
+    margin-left: auto;
+	border-spacing: 0;
 }
 
 .table, .table td {
@@ -17,14 +24,29 @@
 .table span {
     position: relative;
     z-index: 1;
-    background-color: white;
-    padding: 5px;
+    background-color: var(--bg-color);
+    padding: 0 5px; /* меняя ноль на лубое количество px, увеличиватся высота ячуйки */
+    display: inline-block;
+    max-width: calc(var(--width-row) - 16px);
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.table span::after {
+    content: '';
+    position: absolute;
+    background: linear-gradient(270deg, var(--bg-color) 5%, rgba(0, 0, 0, 0) 15%);
+    display: block;
+    top: 0; bottom: 0;
+    width: var(--width-row);
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .table td {
-    padding: 10px;
     text-align: center; 
     vertical-align: middle;
+    min-width: var(--width-row);
 }
 
 .horizontal-center-full::after, .horizontal-center-left::after, .horizontal-center-right::after,
