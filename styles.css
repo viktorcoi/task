@@ -1,7 +1,7 @@
 :root {
     --lise-size: 1px;
     --color-line: black;
-    --width-row: 130px; /* фиксированная ширина ячейки */
+    --width-row: 110px; /* фиксированная ширина ячейки */
     --bg-color: #f4f6f9;
 }
 
@@ -30,17 +30,7 @@
     max-width: calc(var(--width-row) - 16px);
     overflow: hidden;
     white-space: nowrap;
-}
-
-.table span::after {
-    content: '';
-    position: absolute;
-    background: linear-gradient(270deg, var(--bg-color) 5%, rgba(0, 0, 0, 0) 15%);
-    display: block;
-    top: 0; bottom: 0;
-    width: var(--width-row);
-    left: 50%;
-    transform: translateX(-50%);
+    text-overflow: ellipsis;
 }
 
 .table td {
